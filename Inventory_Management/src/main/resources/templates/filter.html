@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Filter</title>
+<style>
+body {
+	font-family: Arial, sans-serif;
+	background-color: pink;
+	margin: 0;
+	padding: 20px;
+}
+
+h1 {
+	text-align: center;
+}
+
+.container {
+	max-width: 600px;
+	margin: 0 auto;
+	background: linear-gradient(45deg,fuchsia 2%,aqua,#FFB266);
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+	font-weight: bold;
+}
+
+input[type="text"], select {
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+button {
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #0056b3;
+}
+@keyframes blink {
+            0% { color: black; }
+            40% { color: red; }
+            60% { color: aqua; }
+            50% { color: red; }
+            100% { color: aqua; }
+        }
+        
+.blinking-label {
+            animation: blink 2s infinite;
+        }
+
+</style>
+</head>
+<body>
+	<h1 class="blinking-label">Product Filter</h1>
+	<div class="container">
+		<form action="#">
+			<div>
+				<label for="name">Product Name:</label> <input type="text" id="name"
+					name="name">
+			</div>
+			<div>
+				<label for="category">Category:</label> <select id="category"
+					name="category">
+					<option value="">Select Category</option>
+					<option value="electronics">Electronics</option>
+					<option value="clothing">Clothing</option>
+					<option value="books">Books</option>
+					<!-- Add more options as needed -->
+				</select>
+			</div>
+			<div>
+				<label for="price">Price Range:</label> <input type="text"
+					id="price" name="price">
+			</div>
+			<button type="submit">Filter</button>
+		</form>
+	</div>
+</body>
+</html>

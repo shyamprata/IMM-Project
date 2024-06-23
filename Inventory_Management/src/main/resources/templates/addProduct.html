@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Add Product</title>
+
+<style>
+body {
+	font-family: Arial, sans-serif;
+	background: linear-gradient(34deg, purple 1%, aqua 2%, pink, pink);
+	padding: 20px;
+	background-image: url("/add.jpg");
+}
+
+h2 {
+	color: #333;
+}
+
+form {
+	background: linear-gradient(45deg, blue 1%, green, orange 2%, aqua);
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	width: 300px;
+	margin: 0 auto;
+}
+
+label {
+	font-weight: bold;
+	margin-bottom: 5px;
+	display: block;
+}
+
+input[type="text"] {
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	/* Ensure the padding is included in the element's total width */
+}
+
+.cta-button {
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 4px;
+	text-decoration: none;
+	display: inline-block;
+	transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+	background-color: #0056b3;
+}
+
+header {
+	display: flex;
+	font-size: 20px;
+	text-overflow: clip;
+	margin-bottom: 10px;
+}
+</style>
+</head>
+<body>
+	<header>
+		<marquee>
+			<h2>Add Product</h2>
+		</marquee>
+	</header>
+	<form th:action="@{/url/addProduct}" method="post">
+		 <label for="pname">Product
+			Name:</label><br> <input type="text" id="pname" name="pname"><br>
+		<label for="price">Price:</label><br> <input type="text"
+			id="price" name="price"><br> <label for="quantity">Quantity:</label><br>
+		<input type="text" id="quantity" name="quantity"><br> <br>
+		<button type="submit" class="cta-button">Add Now</button> 
+	</form>
+</body>
+</html>
